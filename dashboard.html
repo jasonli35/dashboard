@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <title>Dash Board</title>
+         <script src="./public/dashboard.js"></script>
+        
+     </head>
+     <body>
+        <table style="table-layout: fixed; width: 100%; border-collapse: collapse;
+        border: 1px solid black;">
+          <thead style="display:block;">
+            <tr>
+            
+              <th>title</th>
+              <th>competitors</th>
+              <th>price</th>
+              <th>cost</th>
+              <th>market size</th>
+            </tr>
+          </thead>
+          <tr>
+            <tr id = "head"></tr>
+          </tr>
+            
+          </table>
+          <table>
+            <tr id="template">
+               
+                <td id = "title"></td>
+                <td id ="competitors"></td>
+                <td id = "price"></td>
+                <td id = "cost"></td>
+                <td id = "size"></td>
+                <td><button id="delete_button">delete</button></td>
+            </tr>
+          </table>
+          <h3>Add new ideas:</h3>
+        <form action="/add" method="POST" id="add-form">
+            <label for="fname">title:</label>
+            <input type="text" id="input_title" name="input_title"><br><br>
+            <label for="competitor">competitor:</label>
+            <input type="text" id="input_competitor" name="input_competitor"><br><br>
+
+            <label for="price">price:</label>
+            <input type="text" id="input_price" name="input_price"><br><br>
+
+            <label for="cost">cost:</label>
+            <input type="text" id="cost" name="input_cost"><br><br>
+            <label for="market_size">market size:</label>
+            <input type="text" id="market_size" name="market_size"><br><br>
+            <input type='submit' value='Submit'>
+        </form>
+
+
+        <h3>Edit: Modify market size by tiltle</h3>
+        <form action="/modify" method="PUT" id="modify-form">
+            <label for="title">title:</label>
+            <input type="text" name="input_title"><br><br>
+            <label for="new_size">new market size:</label>
+            <input type="text" id="input_competitor" name="new_size"><br><br>
+            <input type='submit' value='Submit'>
+        </form>
+
+
+        
+
+
+
+          
+
+
+     </body>
+ 
+ </html>
